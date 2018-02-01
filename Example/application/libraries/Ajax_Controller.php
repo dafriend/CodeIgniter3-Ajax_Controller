@@ -49,6 +49,7 @@ class Ajax_Controller extends CI_Controller
      */
     public function getInputs($input_keys = FALSE, $requestMethod = 'auto')
     {
+        $requestMethod = strtolower($requestMethod);
         $requestOptions = ['auto', 'get', 'post'];
         if(!is_string($requestMethod) || FALSE === in_array($requestMethod, $requestOptions))
         {
