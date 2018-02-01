@@ -37,14 +37,14 @@
 
             $('#html-test').click(function () {
                 postData = {msg: "<span class='test-this'>Does this work?</span>"};
-                //uncommnet the next line to get a "No Message Available" response
+                //uncomment the next line to get a "No Message Available" response
                 //postData = null; 
                 do_ajax('get_html', 'html', htmlCallback);
             });
 
             $('#fail-input').click(function () {
                 postData = {answer: 42};
-                //uncommnet the next line to make this work
+                //uncomment the next line and this request will work
                 //postData = {answer: 42, msg: "Answer to the Ultimate Question of Life, the Universe, and Everything = "};
                 do_ajax('fail_input', 'text', missingInput);
             });
