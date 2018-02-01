@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 function register_autoloader()
 {
-	spl_autoload_register('ci_autoloader');
+    spl_autoload_register('ci_autoloader');
 }
 /*
  * This piece of code will allow classes that do not start with CI_ 
@@ -18,16 +18,16 @@ function register_autoloader()
 
 function ci_autoloader($class)
 {
-	$paths = ['libraries/', 'core/', 'controllers/', 'models/'];
-	if(strpos($class, 'CI_') !== 0)
-	{
-		foreach($paths as $path)
-		{
-			if(file_exists($file = APPPATH.$path.$class.'.php'))
-			{
-				require_once $file;
-				break;
-			}
-		}
-	}
+    $paths = ['libraries/', 'core/', 'controllers/', 'models/'];
+    if(strpos($class, 'CI_') !== 0)
+    {
+        foreach($paths as $path)
+        {
+            if(file_exists($file = APPPATH.$path.$class.'.php'))
+            {
+                require_once $file;
+                break;
+            }
+        }
+    }
 }

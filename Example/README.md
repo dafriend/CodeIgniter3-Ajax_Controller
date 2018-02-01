@@ -1,7 +1,7 @@
 ## Ajax_Controller Basic Use Example
-The subfolders contain only the files needed to produce an example. You need a functioning CI setup to run this example.
+The `application` subfolders contain only the files needed to produce an example. You need a functioning CI setup to run this example.
 
-The folder structure here matches the standard CodeIgniter (CI) installation.
+The folder structure inside `application/` matches the standard CodeIgniter (CI) installation.
 Copy the files to the matching folders of your CI setup. 
 
 Because this example uses a "hook" be sure to set `$config['enable_hooks'] = TRUE;` in your `config.php` file.
