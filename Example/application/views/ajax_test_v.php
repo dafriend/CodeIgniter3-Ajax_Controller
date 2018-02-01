@@ -31,11 +31,13 @@
             var baseURL = window.location.protocol + "//" + window.location.hostname + '/user_ajax/';
 
             $('#json-test').click(function () {
+                //this request returns json constructed by the controller
                 postData = null;
                 do_ajax('get_json', 'json', jsonCallback);
             });
 
             $('#html-test').click(function () {
+                //the value of 'msg' is simply sent back as-is. Change the html and see.
                 postData = {msg: "<span class='test-this'>Does this work?</span>"};
                 //uncomment the next line to get a "No Message Available" response
                 //postData = null; 
@@ -43,6 +45,7 @@
             });
 
             $('#fail-input').click(function () {
+                //The following postData object won't satisfy User_ajax::fail_input() due to missing 'msg' property
                 postData = {answer: 42};
                 //uncomment the next line and this request will work
                 //postData = {answer: 42, msg: "Answer to the Ultimate Question of Life, the Universe, and Everything = "};
