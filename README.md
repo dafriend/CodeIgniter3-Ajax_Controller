@@ -50,7 +50,7 @@ The files that define the hook and the autoloader are found in the *example/* fo
 
 
 ## Basic Use
-See the example [README](Example/README.md) and examine the files.
+See the [example](Example) and examine the files.
 
 ## Acknowledgement
 This controller was inspired by Josh Campbell's repository [Codeigniter-jQuery-Ajax](https://github.com/ThingEngineer/Codeigniter-jQuery-Ajax) 
